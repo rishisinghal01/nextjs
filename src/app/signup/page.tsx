@@ -25,9 +25,15 @@ export default function signup() {
             <h1>SignUp</h1>
             <hr />
             <label htmlFor="username">UserName</label>
-            <input className="p-4 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"  type="text" id="username" value={user.username} placeholder="username" onChange={(e) => setuser({ ...user, username: e.target.value })} />
-     
- 
+            <input className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600" type="text" id="username" value={user.username} placeholder="username" onChange={(e) => setuser({ ...user, username: e.target.value })} />
+            <label htmlFor="email">Email</label>
+            <input className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600" type="text" id="email" value={user.email} placeholder="email" onChange={(e) => setuser({ ...user, email: e.target.value })} />
+            <label htmlFor="password">Password</label>
+            <input className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600" type="password" id="password" value={user.pasword} placeholder="password" onChange={(e) => setuser({ ...user, pasword: e.target.value })} />
+
+           <button onClick={onSignup} className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">SignUp</button>
+
+           <Link href="/login">Visit login page</Link>
         </div>
     )
 }
