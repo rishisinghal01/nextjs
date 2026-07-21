@@ -48,7 +48,10 @@ export default function login() {
             setloading(false);
         }
     }
-    return (
+     return loading ? (
+        <div>loading</div>
+    ) :(
+
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
 
             <h1>Login</h1>
